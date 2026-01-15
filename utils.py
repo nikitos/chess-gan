@@ -221,7 +221,7 @@ def create_dataset_from_pgn(year, month, num_samples=None):
     Creates a dataset from the last positions of chess games in a PGN file.
     :param pgn_file: Path to the PGN file.
     :param num_samples: Number of samples to create (if None, all games are processed).
-    :return: numpy array with data of size (N, 8, 8, 13), where N is the number of samples.
+    :return: numpy array with data of size (N, 8, 8), where N is the number of samples.
     """
     dataset = []
     generator = read_pgn_and_convert_to_fen(year, month, 2)  # FEN strings generator
